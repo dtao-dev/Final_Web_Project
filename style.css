@@ -1,0 +1,537 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#header-wrapper {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+.animated-title {
+  color: #222;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  padding: 1px 2px 3px 4px;
+}
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+.animated-title > div div span {
+  display: block;
+}
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: #767676;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+.bobaslide{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 1px 2px 3px 4px;
+}
+.bobaslide video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.maincontainer {
+    position: relative; 
+    width: 100%; 
+    height: 0; 
+    padding-bottom: 39.45%; 
+    margin-bottom: 10px; 
+}
+.bobacontainer {
+    position: relative; 
+    width: 100%; 
+    height: 0; 
+    padding-bottom: 39.45%; 
+    margin-bottom: 10px; 
+}
+.bobacontainer > div {
+    position: absolute;
+}
+.bobacontainer > div video{
+    display: block;
+}
+mark.white {
+    color: white;
+    background: none;
+}
+mark.grey {
+    color:  rgb(109, 108, 108);
+    background: none;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+.logo{
+    margin: .5rem;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+    font-family: 'Rosario', sans-serif;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    float: right;
+    margin-right: 20px;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+.navbar ul li a{
+    color: white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+a.active, a:hover{
+    background: rgb(75, 75, 75);
+    transition: .5s;
+}
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        float: right;
+    }
+
+    .navbar-links ul li {
+        display: inline-block;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+.signdrink{
+    text-indent: 30px;
+}
+.topdrinks {
+    position: absolute; 
+    width: 100%; 
+    height: 0; 
+    padding-top: 12%; 
+    margin-bottom: 15%; 
+    font-family: 'Rosario', sans-serif;
+}
+.topdrinks > ul{
+    height: auto;
+    position: absolute;
+    width: 100%;
+}
+.topdrinks > ul li{
+    display: absolute;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 5px;
+}
+.topdrinks > ul li div{
+    display: block;
+    line-height: 50px;
+    margin: 0 5px;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+.topdrinks > h3{
+    display: flex;
+    padding: 25px;
+    border-radius: 5px;
+    position:relative;
+}
+@media(max-width:1023px)
+{
+ .topdrinks > h3 {
+    font-size: 3vw;
+ }
+}
+
+div.frame-box {
+    background-color: #fff;
+    border: 17px solid #131822;
+    padding: 125px 80px;
+    box-shadow: 0 0 18px 7px rgba(0,0,0,0.3);
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 0 0 18px 7px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 0 18px 7px rgba(0,0,0,0.3);
+    font-family: 'Rosario', sans-serif;
+} 
+.page-content{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.custom-img-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 200px;
+    padding: 200px;
+    height: auto;
+}
+.bkg-img1{
+    background-image: url(images/darktable.jpg);
+    width: 100%;
+    height: auto;
+}
+
+.shop-box-item{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.shop-item {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    background: rgb(75, 75, 75);
+    border-color:  #1c1d22;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Rosario', sans-serif;
+}
+
+.shop-item-image {
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 98px;
+    height: 98px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    width: 140px !important;
+    color: white;
+    font-family: 'Rosario', sans-serif;
+}
+
+.shop-item-details .shop-item-price {
+    float: right;
+    width: 82px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+.btn-remove {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-remove:hover {
+    background-color: #CC4C4C;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+} 
+
+.menu-style-1 .menu-item {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.section-header {
+    font-family: 'Rosario', sans-serif;
+    text-align: center;
+    font-size: 50px;
+}
+
+.menu-grid {
+    display: border-box;
+    grid-column-gap: 20px;
+    grid-template-rows: auto auto auto;
+    align-content: center;
+    grid-auto-flow: column;
+    align-items: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border-color:  #1c1d22; 
+}
+
+.menu-item {
+    display: inline-block;
+    justify-content: space-around;
+    background-color: lightgrey;
+    height: 350px;
+    width: 350px;
+    border: 5px black;
+    padding: 40px;
+    margin: 10px;
+}
+
+.menu-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: black;
+    margin-bottom: 15px;
+    font-family: 'Rosario', sans-serif;
+}
+
+.menu-item-image {
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    align-items: center;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    width: 98px;
+    height: 98px;
+}
+
+.menu-item-details {
+    display: flex;
+}
+
+.menu-item-price {
+    width: 140px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Rosario', sans-serif;
+}
+
+.mr-3{
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 768px){
+    .menu-grid { width: 90%; }
+}

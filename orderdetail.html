@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- My CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <title>the bobashop</title>
+    
+    <style>
+      .round-time-bar {
+        margin: 1rem;
+        overflow: hidden;
+      }
+      .round-time-bar div {
+        height: 5px;
+        animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+          forwards;
+        transform-origin: left center;
+        background: linear-gradient(to bottom, green, rgb(26, 153, 0));
+      }
+
+      .round-time-bar[data-style="smooth"] div {
+        animation: roundtime calc(var(--duration) * 1s) linear forwards;
+      }
+
+      .round-time-bar[data-style="fixed"] div {
+        width: calc(var(--duration) * 5%);
+      }
+
+      .round-time-bar[data-color="blue"] div {
+        background: linear-gradient(to bottom, #64b5f6, #1565c0);
+      }
+
+      @keyframes roundtime {
+        to {
+          /* More performant than `width` */
+          transform: scaleX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navigation Bar-->
+    <nav class="navbar">
+      <div class="logo">
+        <h4><a href="index.html"><mark class="grey">the</mark><mark class="white">bobashop</mark></a></h4>
+      </div>
+      <ul class="navbar-links">
+        <li>
+          <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+          <a href="menu.html" class="">Menu</a>
+        </li>
+        <li>
+          <a href="gallery.html" class="">Image Gallery</a>
+        </li>
+        <li>
+          <a href="order.html" class="">Order</a>
+        </li>
+        <li>
+          <a href="contactus.html" class="">Contact Us</a>
+        </li>
+      </ul>
+      <!--mobile navbar-->
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>        
+      </a>
+  </nav>
+<!--End of Navigation bar-->
+<div class="page-content custom-img-background bkg-img2">
+    <div class="col-md-6 col-sm-6 mx-auto">
+      <div class="frame-box">
+          <div class="custom-heading style-1">
+              <h3><span>the bobashop</span></h3>
+              <h3>Thank you for ordering!</h3><br>
+
+              <h3>Your order is currently being processed</h3><br>
+              <h6>You will be redirected to the main page in 10 seconds</h6>
+              <div class="round-time-bar" data-color="green" style="--duration: 10;">
+                <div></div>
+              </div>
+
+              <!-- .divider.style-1 start -->
+              <div class="divider style-1 center">
+                  <span class="hr-simple left"></span>
+                  <i class="fa fa-circle hr-icon"></i>
+                  <span class="hr-simple right"></span>
+  
+              </div>
+          </div><!-- .custom-heading.style-1 end -->
+          <h4>Your order should be ready within 10-20 minutes!</h4><br>
+      </div>
+    </div><!-- .col-md-6 end -->
+  </div><br>
+
+  <!--end of community description-->
+
+  <!-- Order Timer Countdown -->
+    <meta http-equiv="refresh" content="10;index.html" />
+    <script>
+      const button = document.querySelector("#restart-button");
+      const bars = document.querySelectorAll(".round-time-bar");
+      button.addEventListener("click", () => {
+        bars.forEach((bar) => {
+          bar.classList.remove("round-time-bar");
+          bar.offsetWidth;
+          bar.classList.add("round-time-bar");
+        });
+      });</script>
+    <!-- End Order Timer Countdown -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

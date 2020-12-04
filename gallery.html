@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- My CSS-->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <title>Boba Gallery</title>
+
+
+    <style>
+        /* Responsive Image Grid */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+            }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .column {
+            flex: 100%;
+            max-width: 100%;
+            }
+        }
+
+        /* Blur Background Image */
+        body, html {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("images/bannergallery3.jpg");
+
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(3px);
+
+            /* Full height */
+            height: 30%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            font-family: 'Rosario', sans-serif;
+            font-size: 30px;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Zoom Images on Hover */
+        .zoom {
+            transition: transform .2s; /* Animation */
+            margin: 0 auto;
+            }
+
+        .zoom:hover {
+            transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+    </style>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar">
+      <div class="logo">
+        <h4><a href="index.html"><mark class="grey">the</mark><mark class="white">bobashop</mark></a></h4>
+      </div>
+      <ul class="navbar-links">
+        <li>
+            <a href="index.html" class="active">Home</a>
+        </li>
+        <li>
+             <a href="menu.html" class="">Menu</a>
+        </li>
+        <li>
+             <a href="gallery.html" class="">Image Gallery</a>
+        </li>
+        <li>
+            <a href="order.html" class="">Order</a>
+        </li>
+        <li>
+            <a href="contactus.html" class="">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Gallery Banner -->
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <h1 style="font-size: 70px;">Gallery</h1>
+        <p>Food, Drinks, Dessert, And More!</p>
+    </div>
+
+    <!-- Image Grid -->
+    <br><br><br><div class="row">
+        <!-- 1st column -->
+        <div class="column">
+            <div class="zoom">
+                <img src="images/bannerimg1.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg2.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg3.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg4.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg5.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg6.jpg" style="width:100%"></div>
+            <div class="zoom"
+                ><img src="images/bannerimg7.jpg" style="width:100%"></div>
+        </div>
+        <!-- 2nd column -->
+        <div class="column">
+            <div class="zoom">
+                <img src="images/bannerimg8.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg9.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg27.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg11.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg12.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg13.jpg" style="width:100%"></div>
+            <div class="zoom">
+                <img src="images/bannerimg26.jpg" style="width:100%"></div>
+        </div>  
+        <!-- 3rd column -->
+        <div class="column">
+            <div class="zoom"><img src="images/bannerimg14.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg15.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg16.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg17.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg18.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg19.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg20.jpg" style="width:100%"></div>
+        </div>
+        <!-- 4th column -->
+        <div class="column">
+            <div class="zoom"><img src="images/bannerimg21.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg22.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg23.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg24.jpg" style="width:100%"></div>
+            <div class="zoom"><img src="images/bannerimg25.jpg" style="width:100%"></div>
+        </div>
+  </div>
+</body>
+</html>

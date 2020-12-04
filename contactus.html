@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script data-require="jquery" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- My CSS-->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--Custom Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <title>Contact Us</title>
+
+    <style>
+        /* Blur Background Image */
+        body, html {
+            height: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-image {
+            /* The image used */
+            background-image: url("images/bannergallery4.jpg");
+
+            /* Add the blur effect */
+            filter: blur(8px);
+            -webkit-filter: blur(3px);
+
+            /* Full height */
+            height: 30%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* Position text in the middle of the page/image */
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            font-family: 'Rosario', sans-serif;
+            font-size: 70px;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Container */
+
+    </style>
+    
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav class="navbar">
+        <div class="logo">
+            <h4><a href="index.html"><mark class="grey">the</mark><mark class="white">bobashop</mark></a></h4>
+        </div>
+        <ul class="navbar-links">
+            <li>
+            <a href="index.html" class="active">Home</a>
+            </li>
+            <li>
+            <a href="menu.html" class="">Menu</a>
+            </li>
+            <li>
+            <a href="gallery.html" class="">Image Gallery</a>
+            </li>
+            <li>
+            <a href="order.html" class="">Order</a>
+            </li>
+            <li>
+            <a href="contactus.html" class="">Contact Us</a>
+            </li>
+        </ul>
+        <!--mobile navbar-->
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>        
+        </a>
+    </nav>
+    <!--End of Navigation bar-->
+
+    <!-- Contact Us Banner -->
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+        <h1 style="font-size: 30px;">We want to hear from you!</h1>
+        <p>CONTACT US</p>
+    </div>
+    <!-- End of Contact Us Banner -->
+
+    <!-- Contact Form -->
+    <div class="contact1">
+		<div class="container-contact1">
+			<div class="contact1-pic js-tilt" data-tilt>
+				<img src="images/img-01.png" alt="IMG">
+			</div>
+
+            <form method="POST" action="https://formspree.io/f/mknpbpek" method="POST">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+				<span class="contact1-form-title">
+					Get in touch
+				</span>
+
+				<div class="wrap-input1 validate-input" data-validate = "Name is required">
+					<input type="text" name="name" placeholder="Your name" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input type="email" name="_replyto" placeholder="Your email" required>
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
+					<input type="hidden" name="_subject" value="Website contact" />
+					<span class="shadow-input1"></span>
+				</div>
+
+				<div class="wrap-input1 validate-input" data-validate = "Message is required">
+					<textarea name="message" placeholder="Your message" required></textarea>
+					<span class="shadow-input1"></span>
+                </div>
+                
+                <input type="text" name="_gotcha" style="display:none" />
+
+				<div class="container-contact1-form-btn">
+					<button class="contact1-form-btn" type="submit"> 
+						<span>
+							Send Email
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+    <!-- End Contact Form-->
+    </body>
+</html>
